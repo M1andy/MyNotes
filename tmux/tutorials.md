@@ -63,7 +63,7 @@ tmux rename-session -t <old-name> <new-name>
 1. split pane
 
 shortcut: 
-```
+```sh
 # split pane vertically
 ctrl+b "
 # split pane horizontally
@@ -75,7 +75,7 @@ ctrl+b !
 2. move cursor
 
 shortcut: 
-```
+```sh
 # move to another pane
 ctrl+b <arrow>
 # move to last pane
@@ -87,7 +87,7 @@ ctrl+b o
 3. other operation
 
 shortcut:
-```
+```sh
 # close pane
 ctrl+b x
 # zoom in or zoom out 
