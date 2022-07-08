@@ -6,7 +6,7 @@
 ## 摘要
 
 **解决问题**：给定一张源图片和一段简短的文字描述，检索数据库中的一张图片。
-**关键工作**：使用OpenAI 的CLIP来获取图片和文本的特征，**对比学习**，基于内容的图像检索（Content-Based Image Retrieval, **CBIR**），可学习层融合特征
+**关键工作**：使用OpenAI 的预训练模型CLIP来获取图片和文本的特征，**对比学习**，基于内容的图像检索（Content-Based Image Retrieval, **CBIR**），可学习层融合特征
 
 ## 介绍
 
@@ -23,19 +23,20 @@
 **组合器结构**：
 ![组合器结构](特征基于CLIP的图像检索-组合学习.assets/Fig3.jpg)
 
-> 图像特征：`ResNet-50`
-> 文本特征：`Transformer`
-> Loss： `Batch-Based Classfication(BBC)`
+> 图像特征：`Clip Encoder -> ResNet-50`
+> 文本特征：`Clip Encoder -> Transformer`
+> Loss： `Batch-Based Classfication(BBC)?`
 
 ## 思考
 
 - 优点
 
-	1. 模型简单，计算开销较小
-	2. 通过可学习层的方式来融合不同模态的特征，效果显著
-
+  1. 模型简单，计算开销较小
+3. 使用更好的预训练模型来提取特征，效果显著
 - 缺点（暂时没想到）
 
 ## TODO
 
-1. 阅读TIRG的论文
+1. ~~阅读TIRG的论文~~
+1. 阅读CLIP的论文
+
